@@ -10,14 +10,14 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Contactos
-Route::get('/contactos', [App\Http\Controllers\ContactosController::class, 'index'])->name('contactos.index');
-Route::get('/contactos/create', [App\Http\Controllers\ContactosController::class, 'create'])->name('contactos.create');
-Route::post('/contactos', [App\Http\Controllers\ContactosController::class, 'store'])->name('contactos.store');
-Route::get('/contactos/{contacto}', [App\Http\Controllers\ContactosController::class, 'show'])->name('contactos.show');
-Route::get('/contactos/{contacto}/edit', [App\Http\Controllers\ContactosController::class, 'edit'])->name('contactos.edit');
-Route::put('/contactos/{contacto}', [App\Http\Controllers\ContactosController::class, 'update'])->name('contactos.update');
-Route::delete('/contactos/{contacto}', [App\Http\Controllers\ContactosController::class, 'destroy'])->name('contactos.destroy');
+// Clientes
+Route::get('/clientes', [App\Http\Controllers\ClientesController::class, 'index'])->name('clientes.index');
+Route::get('/clientes/create', [App\Http\Controllers\ClientesController::class, 'create'])->name('clientes.create');
+Route::post('/clientes', [App\Http\Controllers\ClientesController::class, 'store'])->name('clientes.store');
+Route::get('/clientes/{cliente}', [App\Http\Controllers\ClientesController::class, 'show'])->name('clientes.show');
+Route::get('/clientes/{cliente}/edit', [App\Http\Controllers\ClientesController::class, 'edit'])->name('clientes.edit');
+Route::put('/clientes/{cliente}', [App\Http\Controllers\ClientesController::class, 'update'])->name('clientes.update');
+Route::delete('/clientes/{cliente}', [App\Http\Controllers\ClientesController::class, 'destroy'])->name('clientes.destroy');
 
 // Artículos
 Route::get('/articulos', [App\Http\Controllers\ArticulosController::class, 'index'])->name('articulos.index');
